@@ -49,10 +49,10 @@ class App extends Component {
 render() {
   return (
     <Wrapper>
-      <Title>Clicky Game</Title>
+      
+      <Title score={this.state.score} highscore={this.state.highscore}>Clicky Game</Title>
       {this.state.friends.map(friend => (
         <FriendCard
-          removeFriend={this.removeFriend}
           id={friend.id}
           key={friend.id}
           name={friend.name}
